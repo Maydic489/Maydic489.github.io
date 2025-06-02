@@ -6,7 +6,14 @@ const withNextra = require("nextra")({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // any configs you need
+  output: "export",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+  // Add this if your repo isn't at root of your GitHub account
+  // basePath: '/your-repo-name',
+  // assetPrefix: '/your-repo-name/',
 };
 
-module.exports = withNextra(nextConfig);
+module.exports = nextConfig;

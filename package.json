@@ -1,14 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "node ./scripts/gen-rss.js && next build",
-    "start": "next start"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build",
+    "deploy": "npm run export && touch out/.nojekyll && gh-pages -d out"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
     "next": "latest",
-    "nextra": "^2.0.0-beta.5",
+    "nextra": "^4.2.17",
     "nextra-theme-blog": "^2.0.0-beta.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
