@@ -1,1 +1,205 @@
-I love youuuu /n-Buay
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vorapol's page</title>
+    <link rel="icon" href="imgs/AmongGief.png" type="image/x-icon" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 5%; /* Move content nearer to the top */
+        color: white; /* Optional: Change text color to white for better contrast */
+        position: relative;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+      }
+      .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+      }
+      .background-blur {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay */
+        backdrop-filter: blur(3px); /* Apply blur effect */
+        z-index: -1;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.7),
+          transparent 50%,
+          transparent 50%,
+          rgba(0, 0, 0, 0.7)
+        );
+        z-index: -1;
+        pointer-events: none; /* Ensure it doesn't interfere with user interactions */
+      }
+      .content {
+        position: relative;
+        z-index: 1;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* Space between buttons */
+        margin-top: 20px; /* Space from the top */
+        margin-bottom: 30px; /* Increased space between buttons and grid */
+      }
+      .button-container button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #bbb; /* Brighter grey background */
+        color: #222; /* Very dark grey text */
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-weight: 600; /* Semi-bold text */
+      }
+      .button-container button:hover {
+        background-color: #999; /* Even brighter grey on hover */
+      }
+      .main-text {
+    margin-bottom: 5px; /* Reduce space between main text and sub text */
+    text-align: center; /* Ensure text is centered */
+    font-size: 3em; /* Main text size */
+    font-weight: bold; /* Make main text bold */
+  }
+  .sub-text {
+    text-align: center; /* Ensure text is centered */
+    font-size: 1.5em; /* Make text smaller */
+    font-weight: 600; /* Semi-bold text */
+  }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 20px; /* Space between grid items */
+      }
+      .grid-item {
+        text-align: center;
+      }
+      .grid-item a {
+        display: block;
+        background-color: rgba(
+          85,
+          85,
+          85,
+          0.8
+        ); /* Darker grey background with 50% transparency */
+        padding: 10px;
+        border-radius: 8px;
+        text-decoration: none; /* Remove underline from links */
+        color: inherit; /* Inherit text color */
+        transition: transform 0.1s ease; /* Smooth transition */
+      }
+      .grid-item a:active {
+        transform: scale(0.95); /* Squash effect */
+      }
+      .grid-item img {
+        width: 100%; /* Make images responsive */
+        height: auto;
+        max-height: 200px; /* Set maximum height for images */
+        object-fit: contain; /* Maintain aspect ratio */
+        outline: 2px solid white; /* Add white outline */
+        border-radius: 8px; /* Make outline rounded */
+      }
+      .grid-item img.portrait {
+        max-height: 300px; /* 50% bigger than 200px */
+      }
+      @media (max-width: 600px) {
+        .grid-container {
+          grid-template-columns: 1fr; /* Single column layout */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <video class="background-video" autoplay loop muted>
+      <source src="vids/NewAtlantisFootball.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="background-blur"></div>
+    <div class="content">
+      <div class="main-text">Vorapol "Buay" Tusakorn</div>
+<div class="sub-text">Unity game Dev</div>
+      </div>
+      <div class="button-container">
+        <button>Home</button>
+        <button>Portfolio</button>
+        <button>Resume</button>
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">
+          <a href="javascript:void(0);">
+            <img src="imgs/NewAtlantis_01.jpg" alt="Image 1" />
+            <p style="font-weight: 600">The NewAtlantis</p>
+            <p>MMO retro metaverse</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="javascript:void(0);">
+            <img src="imgs/Fighting_01.png" alt="Image 2" />
+            <p style="font-weight: 600">Alpha Fighter</p>
+            <p>2D fighter with 3D graphic</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="javascript:void(0);">
+            <img src="imgs/fbw_01.png" alt="Image 3" />
+            <p style="font-weight: 600">Fireball War</p>
+            <p>One button fireball-based fighting game</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="javascript:void(0);">
+            <img src="imgs/NewAtlantisAR_01.png" alt="Image 4" />
+            <p style="font-weight: 600">The NewAtlantis AR</p>
+            <p>Bring them out to the real world</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="javascript:void(0);">
+            <img src="imgs/rider_01.jpg" alt="Image 5" />
+            <p style="font-weight: 600">Midday Rider</p>
+            <p>Endless bike ride</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="javascript:void(0);">
+            <img src="imgs/MatchBlast.png" alt="Image 6" />
+            <p style="font-weight: 600">Match Blast</p>
+            <p>Good old Match 2 game</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".grid-item img");
+        images.forEach((img) => {
+          img.onload = function () {
+            if (img.naturalHeight > img.naturalWidth) {
+              img.classList.add("portrait");
+            }
+          };
+        });
+      });
+    </script>
+  </body>
+</html>
